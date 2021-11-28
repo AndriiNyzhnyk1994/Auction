@@ -1,38 +1,103 @@
+body {
+    background-color: rgba(59,62,62,0.9);
+}
+
 .App {
-  text-align: center;
+    padding: 10px;
+    text-align: center;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    'h h h h'
+    'l l l t';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    background-color: gray;
+    text-align: center;
+    grid-area: h;
+    border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.lots-list {
+    grid-area: l;
+    background-color: gray;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.timer {
+    border-radius: 10px;
+    background-color: gray;
+    text-align: center;
+    grid-area: t;
+    min-height: 500px;
+}
+.timer button {
+    margin: 3px;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+
+/*lot`s styles start*/
+.lot-item {
+    color: beige;
+    height: 25px;
+    margin: 5px;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: rgba(59,62,62,0.38);
+    display: grid;
+    grid-template-areas: 'lt lt lt lt lt ls ls ls ls csf csf rlb';
+}
+.lot-title {
+    margin-left: 20px;
+    text-align: start;
+    grid-area: lt;
+    width: 200px;
+}
+.lot-score {
+    width: 50px;
+    text-align: center;
+    grid-area: ls;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.change-score-input{
+    max-width: 50px;
+}
+.decrease-score-button {
+    width: 30px;
+}
+
+.increase-score-button {
+    grid-area: isb;
+    width: 30px;
+}
+.remove-lot-button {
+    grid-area: rlb;
+    height: 25px;
+    width: 20px;
+}
+.change-score-form {
+    grid-area: csf;
+
+}
+/*lot`s styles end*/
+
+
+
+
+.error-message {
+    color: red;
+}
+
+.error {
+    border: 1px solid red;
+}
+.add-item-form {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+
 }
