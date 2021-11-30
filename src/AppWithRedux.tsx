@@ -45,7 +45,7 @@ function AppWithRedux() {
     return (
         <div className="App">
             <div className={'header'}>
-                <h1>Auction</h1>
+                <h1>auction</h1>
             </div>
 
             <div className={'lots-list'}>
